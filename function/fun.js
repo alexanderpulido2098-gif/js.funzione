@@ -146,9 +146,93 @@
 
 // }
 
+// ESERCIZIO  DI COMPARAZIONE CON FUNCTION ARROW (riuasume in meno righe di codice il FUNCTION  tradizionale)
+
+function prezzoPiuiva(prezzo) {
+
+    return prezzo = prezzo * 1.22
+}
+
+const prezzoConiva = prezzoPiuiva(85)
+console.log(prezzoConiva)
+
+const prezzzoFinale = prezzo => prezzo * 1.22
+console.log(prezzzoFinale(85))
+
+// // Esercizio ForEach (ti stampa tutti gli elementi del array  )
+
+
+// const prodotti = ["latte", "pane", "uova"];
+
+// prodotti.forEach(prodotto => { console.log(`Articolo presente : ${prodotto}`) });
+
+
+// Esercizio map (ti crea una nuova array modidficando i  primi elemnti )
+
+const Prezzi = [15, 25, 35];
+const prezzoScontato = Prezzi.map(prezzo => prezzo - 0.9)
+console.log(prezzoScontato)
+
+
+// Esercizio Find (trova un solo elemento )
+
+const spesa = ["latte", "pane", "uova"];
+const trovatoParola = spesa.find(parola => parola !== "e")
+console.log(trovatoParola)
+
+// const prodotti = ["latte", "pane", "uova"];
+// const trovato = prodotti.find(prodotto => prodotto.includes("e"));
+
+// console.log(trovato);
 
 
 
+// esercizio Filter (trova piu di un elemento e ti lo slava in una array )
+
+const numeri = [4, 9, 12, 3]
+const TrovaMaggiore5 = numeri.filter(numero => numero >= 5)
+console.log(TrovaMaggiore5)
+
+// Esercizi some (Con some basta un elemento valido.)
+
+const Interi = [2, 4, 7, 9, 13]
+const iDispari = Interi.some(dispari => dispari % 2 !== 0);
+console.log(iDispari)
+const quantitaDispare = Interi.filter(quanntita => quanntita % 2 !== 0)
+console.log(quantitaDispare)
+
+
+// Esercizi every (Con every la condizione deve essere vera per tutti gli elementi.)
+
+const importi = [20, 15, 18];
+const maggiore10 = importi.every(numeri => numeri >= 10);
+console.log(maggiore10)
+
+// Esercizio Final
+
+const prodottiOnline = [
+    { nome: "videogames", prezzo: 20.00 },
+    { nome: "Controllers", prezzo: 25.00 },
+    { nome: "consol", prezzo: 90.00 },
+    { nome: "setups", prezzo: 70.00 },
+];
+// foreach
+prodottiOnline.forEach((prodotto) => { console.log(prodotto.nome); });
+// map 
+const scontoproddoti = prodottiOnline.map(sconto => sconto.prezzo - (sconto.prezzo * 0.2))
+console.log(scontoproddoti)
+// find 
+const cercaProdotto = prodottiOnline.find(parola => parola.nome === "videogames")
+console.log(cercaProdotto)
+// filter 
+const prodottiPiuCostosi = prodottiOnline.filter(prezzo => prezzo.prezzo > 50)
+console.log(prodottiPiuCostosi)
+// some 
+const prodottoEconomico = prodottiOnline.some(prodotto => prodotto.prezzo < 30)
+console.log(prodottoEconomico)
+// every
+const prezziEsistenti = prodottiOnline.every(prodotti => prodotti.prezzo > 0)
+console.log(prezziEsistenti)
 
 
 
